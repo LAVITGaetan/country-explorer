@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Nunito;
+    src: url(./assets/fonts/Nunito_Sans/variable.ttf);
+}
+
+:root {
+    --clr-background : #fff;
+    --clr-body : #F1F6F7;
+    --clr-text : #1f2d36;
+}
+
+.dark-theme {
+    --clr-background : #2b3642;
+    --clr-body : #1f2d36;
+    --clr-text : #F1F6F7;
+}
+
+body {
+    background-color: var(--clr-body);
+    font-family: Nunito;
+}

@@ -1,0 +1,19 @@
+.detail {
+    text-decoration: none;
+    display: block;
+    padding: 24px 7.5%;
+}
+
+.back {
+    display: flex;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background-color: var(--clr-background);
+    width: fit-content;
+    cursor: pointer;
+}
+
+.back-text {
+    padding-left: 12px;
+    color: var(--clr-text);
+}

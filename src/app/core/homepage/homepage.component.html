@@ -1,0 +1,43 @@
+<div class="homepage">
+    <div class="homepage-search">
+        <div class="search-bar">
+            <div class="search-icon" (click)="searchByName()"><img src="./assets/frontend/loop.svg" width="24px" height="24px" alt="search">
+            </div><input (keydown.enter)="searchByName()" [formControl]="searchTag" class="search-input" placeholder="Search for a country">
+        </div>
+    </div>
+
+    <div class="homepage-filter">
+        <div class="search-filter">
+            <span class="filter-label">Filter by region</span>
+            <img class="down-svg" width="12px" height="12px"
+                src="./assets/frontend/down-arrow.svg" alt="down">
+            <div class="filter-content">
+                <p *ngFor="let region of regions" class="filter-text" (click)="changeRegion(region)">{{region}}</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="homepage-countries">
+        <a href="/country/{{country.name.common}}" *ngFor="let country of renderedCountries" class="country-card">
+            <div class="card-thumbnail">
+                <img class="thumbnail" [src]="country.flags.svg" alt="">
+            </div>
+            <h2 class="card-name">{{country.name.common}}</h2>
+            <div class="card-row">
+                <p><span class="card-detail-label">Region : </span><span
+                        class="card-detail-text">{{country.region}}</span></p>
+            </div>
+            <div class="card-row">
+                <p><span class="card-detail-label">Population : </span><span
+                        class="card-detail-text">{{country.population}}</span></p>
+            </div>
+            <div class="card-row">
+                <p><span class="card-detail-label">Capital : </span><span
+                        class="card-detail-text">{{country.capital}}</span></p>
+            </div>
+        </a>
+
+    </div>
+
+</div>
